@@ -3997,3 +3997,20 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+/* Section/Article */
+section.special, article.special {
+  text-align: center;
+}
+section.bottom-margin, article.bottom-margin {
+  margin-bottom: 50px;
+}
+section.bibtex, article.bibtex {
+  text-align: left;
+  overflow: auto;
+  border: 1px solid white;
+  padding: 10px;
+}
+section.bibtex pre, article.bibtex pre {
+  margin: 0;
+}
