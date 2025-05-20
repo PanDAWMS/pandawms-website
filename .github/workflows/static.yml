@@ -32,8 +32,10 @@ jobs:
         run: |
           cd dist
           git init
-          git remote add origin https://github.com/${{ github.repository }}.git
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
           git checkout -b gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push --force origin gh-pages
